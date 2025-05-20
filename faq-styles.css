@@ -1,0 +1,204 @@
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- Grid Container and Layout ---------- */
+.grid-container {
+  min-height: 100vh; /* full viewport height */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;  /* header, content, footer */
+  grid-template-areas:
+    "banner banner banner"
+    "main-content main-content main-content"
+    "footer footer footer";
+}
+
+.banner {
+  grid-area: banner;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+
+.main-content {
+  grid-area: main-content;
+  padding-bottom: 20px;
+}
+
+
+.footer {
+  grid-area: footer;
+}
+
+/* ---------- Lower Banner (Footer) Styling ---------- */
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 40.5px 10px;
+  font-size: 14px;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-content p {
+  margin: 5px 0;
+}
+.footer-socials a,
+.footer-contact a,
+.footer-links a {
+  color: #D4AF37;
+  text-decoration: none;
+  margin: 0 5px;
+}
+.footer-socials a:hover,
+.footer-contact a:hover,
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Global Styles ---------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---------- Banner Styles ---------- */
+.banner-heading-right {
+  font-size: 12px;
+  text-align: right;
+}
+.banner {
+  margin: 0;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100vw;
+  margin-top: -40px;
+  padding-bottom: 15px;
+  height: 100px;
+  overflow: hidden;
+}
+.banner-headings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner-heading-left {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  max-width: 150px;
+}
+.banner-heading-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  margin-right: 20px;
+}
+.banner-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.banner-button:hover {
+  background-color: #D4AF37;
+  color: #000000;
+  transition: background-color 0.3s ease;
+}
+.banner-p {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.banner-p:hover {
+  color: #D4AF37;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+/* ---------- Main Content Styles ---------- */
+.main-content {
+  display: grid;
+}
+.main-content-text {
+  display: grid;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;  /* Center text inside the container */
+  width: 100%;         /* Use full width */
+  margin: 0 auto;      /* Auto margins to center the container if it's narrower */
+}
+
+
+.main-paragraph {
+  line-height: 1.6;
+  color: #000000;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+  padding-top: 50px;
+  text-align: center;  /* Ensures the title text is centered */
+
+}
+section{
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* ---------- Mobile Optimizations ---------- */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "banner"
+      "main-content"
+      "footer";
+  }
+  
+}
+
+.list {
+  text-align: left; /* Centers the entire block */
+  margin: 20px 0;     /* Optional spacing around the list */
+}
+
+.list .list-header {
+ 
+  font-weight: bold;   /* Optional: emphasize header text */
+}
+
+.list ul {
+  display: inline-block;  /* Shrinks the UL to its content width so centering works */
+  text-align: left;       /* Aligns the list items to the left */
+  padding-left: 20px;     /* Optional: adjust for bullet placement */
+  margin: 0;              /* Reset default margins */
+}
+
+.list ul li {
+  list-style-position: outside; /* Standard bullet placement */
+}
+.gold-text {
+  color: #D4AF37; /* or any gold color of your choice */
+  font-weight: bold; /* Optional: bold to further emphasize */
+}

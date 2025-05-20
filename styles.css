@@ -1,0 +1,382 @@
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- Grid Container and Layout ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Left, Center, Right */
+  grid-template-rows: auto 1fr; /* Banner and main content rows */
+  grid-template-areas:
+    "banner banner banner"
+    "left-section main-content right-section";
+  gap: 20px;
+  /* Removing fixed min-height lets content push the footer to the bottom */
+  
+}
+
+.banner {
+  grid-area: banner;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.left-section {
+  grid-area: left-section;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.main-content {
+  grid-area: main-content;
+  padding-bottom: 20px;
+}
+.right-section {
+  grid-area: right-section;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/* ---------- Lower Banner (Footer) Styling ---------- */
+.lower-banner {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 40.5px 10px;
+  font-size: 14px;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-content p {
+  margin: 5px 0;
+}
+.footer-socials a,
+.footer-contact a,
+.footer-links a {
+  color: #D4AF37;
+  text-decoration: none;
+  margin: 0 5px;
+}
+.footer-socials a:hover,
+.footer-contact a:hover,
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Global Styles ---------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---------- Banner Styles ---------- */
+.banner-heading-right {
+  font-size: 12px;
+  text-align: right;
+}
+.banner {
+  margin: 0;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100vw;
+  margin-top: -40px;
+  padding-bottom: 15px;
+  height: 100px;
+  overflow: hidden;
+}
+.banner-headings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner-heading-left {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  max-width: 150px;
+}
+.banner-heading-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  margin-right: 20px;
+}
+.banner-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.banner-button:hover {
+  background-color: #D4AF37;
+  color: #000000;
+  transition: background-color 0.3s ease;
+}
+.banner-p {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.banner-p:hover {
+  color: #D4AF37;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+/* ---------- Main Content Styles ---------- */
+.main-content {
+  display: grid;
+}
+.main-content-text {
+  display: grid;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+.main-paragraph {
+  line-height: 1.6;
+  color: #000000;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- Buttons ---------- */
+.main-button-1 {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.main-button-1:hover {
+  background-color: #D4AF37;
+  color: #000000;
+  transition: background-color 0.3s ease;
+}
+.main-button-2 {
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  color: #000000;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.main-button-2:hover {
+  background-color: #D4AF37;
+  color: #000000;
+  transition: background-color 0.3s ease;
+}
+.main-buttons {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* ---------- Main Image Container & Image ---------- */
+.main-content-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+.main-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.active-thumbnail {
+  opacity: 1;
+  border-color: #D4AF37;
+}
+
+
+/* ---------- Arrow Button Styles ---------- */
+.arrow-button {
+  background: none;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: #000000;
+}
+.arrow-button:hover {
+  color: #D4AF37;
+}
+
+/* ---------- Featured Properties Section ---------- */
+.featured-properties {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.featured-properties h2 {
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.property-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.property-card:hover {
+  transform: translateY(-5px);
+}
+.property-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.property-info {
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+.property-info h3 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  color: #333;
+}
+.property-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ---------- Mobile Optimizations ---------- */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "banner"
+      "main-content";
+  }
+  
+  .left-section,
+  .right-section {
+    display: none;
+  }
+  
+  .featured-properties h2 {
+    font-size: 24px;
+  }
+  .property-info h3 {
+    font-size: 18px;
+  }
+  .property-info p {
+    font-size: 13px;
+  }
+}
+
+.main-caption{
+  padding-left: 10px;
+  padding-right: 10px;
+  display: grid;
+}
+
+.caption-text{
+  text-align: center;
+}
+a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the text color from the parent */
+}
+.gold-text {
+    color: #D4AF37; /* Gold color */
+}
+
+
+/*Booking Styles*/
+
+.form-group {
+  gap: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-bottom: 180px;
+}
+
+input,
+.submit-button {
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+}
+
+.submit-button {
+  background-color: #000000;
+  color: #D4AF37;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+}
+.submit-button:hover{
+  background-color: #D4AF37;
+  color: #000000;
+  transition: ease 0.5s;
+}

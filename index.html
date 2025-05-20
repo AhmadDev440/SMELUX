@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SME LUX - Stay in Style">
+  <title>SME LUX</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Defer the script so the DOM loads first -->
+  <script defer src="script.js"></script>
+  <link rel="icon" href="company-logo.jpg" type="image/x-icon">
+</head>
+<body>
+  <!-- Landing Page Grid Container (without footer) -->
+  <div class="grid-container">
+    <!-- Top Banner -->
+    <div class="banner">
+      <div class="banner-headings">
+        <div class="banner-heading-left">
+          <a href="index.html">
+            <img src="company-logo.jpg" alt="SME LUX Logo" class="logo">
+          </a>
+        </div>
+        <div class="banner-heading-right">
+          <a class="banner-clickable" href="index.html"><p class="banner-p">Home</p></a>
+          <a class="banner-clickable" href="about.html"><p class="banner-p">About Us</p></a>
+          <a class="banner-clickable" href="faq.html"><p class="banner-p">FAQ</p></a>
+          <a class="banner-clickable" href="contact.html">
+            <button class="banner-button">Contact Us</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left Section with Arrow Button -->
+    <div class="left-section">
+      <button class="arrow-button" id="left-arrow" onclick="prevImage()">&#9664;</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="main-content-text">
+        <p class="main-paragraph">
+          Experience Luxury with Our Exclusive Property Selection
+        </p>
+      </div>
+
+      <!-- Main Image Container -->
+      <div class="main-content-image" id="main-content-image">
+        <img id="main-image" src="494360167_662537506666354_2332739005679333350_n.png" alt="Luxury Property" class="main-image">
+      </div>
+
+      <!-- Caption Area -->
+      <div class="main-caption">
+        <p class="caption-text">Our stylish and modern studio flat in the heart of Canary Wharf (Zone 2). Perfect for solo travelers, couples, or business professionals, this cozy space offers everything you need for a comfortable and convenient stay.
+        </p>
+        
+      </div>
+      <!-- Thumbnails Section -->
+      <div class="thumbnail-container" id="thumbnail-container">
+        <!-- Thumbnails will be injected by JavaScript -->
+      </div>
+
+
+      <!-- Buttons -->
+      <div class="main-buttons">
+        <a href="booking.html" >
+          <button class="main-button-1">Book</button>
+        </a>
+        <button class="main-button-2">Explore</button>
+      </div>
+    </div>
+
+    <!-- Right Section with Arrow Button -->
+    <div class="right-section">
+      <button class="arrow-button" id="right-arrow" onclick="nextImage()">&#9654;</button>
+    </div>
+  </div>
+
+  <!-- Featured Properties Section (appears when scrolling down) -->
+  <section class="featured-properties">
+    <h2>Featured Properties</h2>
+    <div class="featured-grid">
+      <!-- Property Card 1 -->
+      <div class="property-card">
+        <img src="IMAGEINSERT.jpg" alt="Luxury Villa">
+        <div class="property-info">
+          <h3>Luxury Villa</h3>
+          <p>Coastal view &#124; 4 Beds &#124; 3 Baths</p>
+        </div>
+      </div>
+      <!-- Property Card 2 -->
+      <div class="property-card">
+        <img src="IMAGEINSERT.jpg" alt="Modern Apartment">
+        <div class="property-info">
+          <h3>Modern Apartment</h3>
+          <p>City view &#124; 2 Beds &#124; 2 Baths</p>
+        </div>
+      </div>
+      <!-- Property Card 3: Suburban Home -->
+      <div class="property-card center-mobile">
+        <img src="property3.jpg" alt="Suburban Home">
+        <div class="property-info">
+          <h3>Suburban Home</h3>
+          <p>Quiet neighbourhood &#124; 3 Beds &#124; 2 Baths</p>
+        </div>
+      </div>
+
+      <!-- Add more property cards as needed -->
+    </div>
+  </section>
+
+  <!-- Lower Banner as Footer at the bottom of the page -->
+  <footer class="lower-banner">
+    <div class="footer-content">
+      <!-- Social Media Links -->
+      <div class="footer-socials">
+        <p>
+          Follow us:
+          <!--<a href="" target="_blank">Facebook</a> |
+          <a href="" target="_blank">Twitter</a> | -->
+          <a href="https://www.instagram.com/smeluxeltd?igsh=ZzgzbnY5MjI4ODd1&utm_source=qr" target="_blank">Instagram</a> |
+          <a href="https://www.linkedin.com/in/sharjeelirfank?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app " target="_blank">LinkedIn</a>
+        </p>
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="footer-contact">
+        <p>
+          Email: <a href="smeluxx@gmail.com">smeluxx@gmail.com</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+          Phone: <a href="tel:+447916227960">+44 791 622 7960</a>
+        </p>
+      </div>
+  
+      <!-- Navigation / Legal Links -->
+      <div class="footer-links">
+        <a href="Privacy_Policy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a> |
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="footer-copyright">
+        <p>&copy; 2025 SME LUX. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
