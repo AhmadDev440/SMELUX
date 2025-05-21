@@ -14,23 +14,40 @@
   <!-- Landing Page Grid Container (without footer) -->
   <div class="grid-container">
     <!-- Top Banner -->
-    <div class="banner">
-      <div class="banner-headings">
-        <div class="banner-heading-left">
-          <a href="index.html">
-            <img src="company-logo.jpg" alt="SME LUX Logo" class="logo">
-          </a>
-        </div>
-        <div class="banner-heading-right">
-          <a class="banner-clickable" href="index.html"><p class="banner-p">Home</p></a>
-          <a class="banner-clickable" href="about.html"><p class="banner-p">About Us</p></a>
-          <a class="banner-clickable" href="faq.html"><p class="banner-p">FAQ</p></a>
-          <a class="banner-clickable" href="contact.html">
-            <button class="banner-button">Contact Us</button>
-          </a>
-        </div>
-      </div>
+    <!-- Banner Section -->
+<div class="banner">
+  <div class="banner-headings">
+    <div class="banner-heading-left">
+      <a href="index.html">
+        <img src="company-logo.jpg" alt="SME LUX Logo" class="logo">
+      </a>
     </div>
+    <!-- Desktop navigation: visible on larger screens -->
+    <div class="banner-heading-right desktop-menu">
+      <a class="banner-clickable" href="index.html"><p class="banner-p">Home</p></a>
+      <a class="banner-clickable" href="about.html"><p class="banner-p">About Us</p></a>
+      <a class="banner-clickable" href="faq.html"><p class="banner-p">FAQ</p></a>
+      <a class="banner-clickable" href="contact.html">
+        <button class="banner-button">Contact Us</button>
+      </a>
+    </div>
+    <!-- Mobile navigation trigger: hamburger icon -->
+    <div class="mobile-menu-icon">
+      <button class="hamburger" onclick="toggleMobileMenu()">&#9776;</button>
+    </div>
+  </div>
+  
+  <!-- Mobile dropdown menu (hidden by default) -->
+  <div id="mobile-menu" class="mobile-dropdown">
+    <a class="banner-clickable" href="index.html"><p class="banner-p">Home</p></a>
+    <a class="banner-clickable" href="about.html"><p class="banner-p">About Us</p></a>
+    <a class="banner-clickable" href="faq.html"><p class="banner-p">FAQ</p></a>
+    <a class="banner-clickable" href="contact.html">
+      <button class="banner-button">Contact Us</button>
+    </a>
+  </div>
+</div>
+    
 
     <!-- Left Section with Arrow Button -->
     <div class="left-section">
