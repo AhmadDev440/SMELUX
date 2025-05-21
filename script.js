@@ -98,3 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+function toggleMobileMenu() {
+  console.log('Toggle mobile menu executed');
+  var mobileMenu = document.getElementById("mobile-menu");
+  if (mobileMenu.style.display === "block") {
+    mobileMenu.style.display = "none";
+  } else {
+    mobileMenu.style.display = "block";
+  }
+}
