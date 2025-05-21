@@ -380,3 +380,43 @@ input,
   color: #000000;
   transition: ease 0.5s;
 }
+/* Initially hide the mobile menu icon and dropdown */
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-dropdown {
+  display: none; /* Hidden by default */
+  background-color: #000000;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  top: 100px; /* Adjust to be just below your fixed banner */
+  left: 0;
+  z-index: 999; 
+}
+
+/* Style the hamburger button */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Media queries for mobile */
+@media (max-width: 768px) {
+  /* Hide the desktop menu on mobile */
+  .desktop-menu {
+    display: none;
+  }
+  /* Display the hamburger icon on mobile */
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50px; /* Adjust this as needed relative to your banner */
+  }
+}
